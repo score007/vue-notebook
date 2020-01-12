@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>记事本</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div id="main">
+			<input type="text" placeholder="请输入备忘录" v-model="inputValue" @keyup.enter="add"/>
+			<ul>
+				<li class="ite" v-for="(item,index) in list">{{index+1}}. {{item}}<span class="del" @click="del(index)">+</span></li>
+				<li class="aco">{{list.length}} items left<span @click="clear">clearAll</span></li>
+			</ul>
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<script type="text/javascript">
+		var app= new Vue({
+			el:"#main",
+			data: {
+				list:['写代码','吃饭','睡觉'],
+				inputValue:""
+			},
+			methods:{
+				del:function(index){
+					this.list.splice(index,1);
+				},
+				add:function(){
+					this.list.push(this.inputValue);
+				},
+				clear:function(){
+					this.list=[];
+				}
+			}
+		})
+	</script>
+</html>

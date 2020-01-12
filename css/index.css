@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: gainsboro;	
+}
+
+#main{
+	width: 400px;
+	margin: 200px auto;
+}
+
+input{
+	width: 396px;
+	height: 30px;
+	text-indent: 10px;
+}
+
+ul{
+	box-sizing: border-box;
+	width: 400px;
+	list-style-type: none;
+	border: solid 1px #a9a9a9;
+	border-top: 0;
+}
+
+.ite{
+	height: 25px;
+	background: white;
+	border:solid 1px gainsboro;
+	line-height: 25px;
+	font-size: 14px;
+	color: #595959;		
+}
+
+.aco{
+	height: 18px;
+	background: white;
+	border:solid 1px gainsboro;
+	line-height: 18px;
+	font-size: 12px;
+	color: #898989;	
+}
+
+.aco span{
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+
+.del{
+	font-size: 24px;
+	float: right;
+	margin-right: 10px;
+	transform:rotate(45deg);
+	display: none;
+	cursor: pointer;
+}
+
+li:hover .del{
+	display: block;
+}
+
